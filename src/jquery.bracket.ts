@@ -796,7 +796,7 @@ interface Options {
 
         var name = !team.name ? '--' : team.name
         var tEl = $('<div class="team"></div>');
-        var nEl = $('<div class="label"></div>').appendTo(tEl)
+        var nEl = $('<div class="jQBracket-label"></div>').appendTo(tEl)
 
         if (round === 0)
           tEl.attr('data-resultid', 'team-' + rId)
@@ -826,7 +826,7 @@ interface Options {
                   opts.init.teams[~~(team.idx / 2)][team.idx % 2] = val
                 renderAll(true)
                 span.click(editor)
-                var labels = opts.el.find('.team[data-teamid=' + (team.idx + 1) + '] div.label:first')
+                var labels = opts.el.find('.team[data-teamid=' + (team.idx + 1) + '] div.jQBracket-label:first')
                 if (labels.length && next === true && round === 0)
                   $(labels).click()
               }
